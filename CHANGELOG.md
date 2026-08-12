@@ -2,7 +2,7 @@
 
 All notable changes to `sr2e-pink-fohawk`.
 
-## [Unreleased]
+## 0.1.0 — 2026-08-11
 
 ### Added
 - **Mel** (government name Melvin Offaleater) — troll melee specialist, uncle to Tina Bonemeal.
@@ -18,6 +18,10 @@ All notable changes to `sr2e-pink-fohawk`.
 - `npm run validate` — asserts chargen point spend against the system's
   priority table, the Essence and Body Index ceilings, 16-character document
   ids, and that every referenced portrait exists on disk.
+
+### Packaging
+- Release workflow: a `vX.Y.Z` tag validates the cast, rebuilds the packs, and
+  publishes the installable zip, `module.json`, and the character-sheet PDF.
 
 ### Notes
 - Mel's Reaction is **10**, not 8. Muscle Augmentation is *not* Muscle

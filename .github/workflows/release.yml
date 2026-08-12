@@ -1,0 +1,130 @@
+# GitHub Actions workflow for releasing the Pink Fohawk cast module.
+#
+# USAGE:
+#   1. Bump "version" in module.json
+#   2. Tag and push: git tag v0.1.0 && git push origin v0.1.0
+#   3. The workflow validates the cast, (re)builds packs from packs-src/, then
+#      publishes a GitHub Release with module.json (URLs baked in), the
+#      installable zip, and the printable character sheet.
+#
+# Foundry installation URL (paste into Foundry's module installer):
+#   https://github.com/futurekill/sr2e-pink-fohawk/releases/latest/download/module.json
+
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+permissions:
+  contents: write
+
+env:
+  MODULE_ID: sr2e-pink-fohawk
+  REPO: futurekill/sr2e-pink-fohawk
+
+jobs:
+  release:
+    name: Build & Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      # The validator imports the sr2e system's own priority table to check
+      # chargen spend, so the system has to be on disk beside this repo — the
+      # same layout the tools assume locally.
+      - name: Checkout the sr2e system (validator reads its rules)
+        uses: actions/checkout@v5
+        with:
+          repository: futurekill/sr2e-foundryvtt
+          path: sr2e-foundryvtt
+
+      # tools/ import the system as ../../sr2e-foundryvtt — i.e. a SIBLING of
+      # this repo. Checkout can only write inside the workspace, so link the
+      # checked-out copy into the parent directory to recreate that layout.
+      - name: Put the system where the tools expect it
+        run: ln -s "$PWD/sr2e-foundryvtt" ../sr2e-foundryvtt
+
+      - name: Extract version from tag
+        id: version
+        run: |
+          TAG="${GITHUB_REF_NAME}"
+          echo "version=${TAG#v}" >> "$GITHUB_OUTPUT"
+          echo "tag=${TAG}" >> "$GITHUB_OUTPUT"
+
+      - name: Set up Node
+        uses: actions/setup-node@v5
+        with:
+          node-version: "22"
+
+      # validate BEFORE build-packs: a bad actor should fail the release, not
+      # get compiled into a LevelDB and shipped.
+      - name: Install dependencies, validate, build packs
+        run: |
+          npm install --no-audit --no-fund
+          npm run validate
+          npm run build-packs
+          ls -1 packs/
+
+      - name: Render the character sheet PDF
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq librsvg2-bin
+          npm run sheet
+          ls -l dist/
+
+      - name: Update module.json
+        run: |
+          VERSION="${{ steps.version.outputs.version }}"
+          TAG="${{ steps.version.outputs.tag }}"
+          jq \
+            --arg ver "$VERSION" \
+            --arg manifest "https://github.com/${{ env.REPO }}/releases/latest/download/module.json" \
+            --arg download "https://github.com/${{ env.REPO }}/releases/download/${TAG}/${{ env.MODULE_ID }}.zip" \
+            --arg url "https://github.com/${{ env.REPO }}" \
+            --arg changelog "https://github.com/${{ env.REPO }}/releases/tag/${TAG}" \
+            '.version = $ver | .manifest = $manifest | .download = $download | .url = $url | .changelog = $changelog' \
+            module.json > module.json.tmp && mv module.json.tmp module.json
+          jq '{version, manifest, download}' module.json
+
+      # rsync does NOT read .gitignore, so every exclude has to be spelled out
+      # here or build junk ships to players. dist/ and the portrait .png are
+      # build products of the sheet renderer, not module content: Foundry loads
+      # the .webp, and the PDF rides along as its own release asset instead.
+      - name: Package module zip
+        run: |
+          mkdir -p staging/${{ env.MODULE_ID }}
+          rsync -avm \
+            --exclude='.git' --exclude='.github' --exclude='staging' \
+            --exclude='.DS_Store' --exclude='.sheet.svg' \
+            --exclude='node_modules' --exclude='.gitignore' --exclude='*.md' \
+            --exclude='docs' --exclude='package.json' --exclude='package-lock.json' \
+            --exclude='packs-src' --exclude='tools' --exclude='_work' \
+            --exclude='dist' --exclude='assets/portraits/*.png' \
+            --exclude='sr2e-foundryvtt' \
+            ./ staging/${{ env.MODULE_ID }}/
+          cd staging && zip -r ../${{ env.MODULE_ID }}.zip ${{ env.MODULE_ID }}/ && cd ..
+          unzip -l ${{ env.MODULE_ID }}.zip
+
+      - name: Extract release notes from commit message
+        id: notes
+        run: |
+          TAG="${{ steps.version.outputs.tag }}"
+          echo "subject=$(git log -1 --format='%s' "${TAG}")" >> "$GITHUB_OUTPUT"
+          git log -1 --format='%b' "${TAG}" > /tmp/release_notes.txt
+
+      - name: Create GitHub Release
+        uses: ncipollo/release-action@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          tag: ${{ steps.version.outputs.tag }}
+          name: "${{ steps.notes.outputs.subject }}"
+          bodyFile: /tmp/release_notes.txt
+          artifacts: |
+            module.json
+            ${{ env.MODULE_ID }}.zip
+            dist/mel-offaleater-sheet.pdf
+          artifactContentType: application/zip
+          prerelease: ${{ contains(steps.version.outputs.version, 'alpha') || contains(steps.version.outputs.version, 'beta') || contains(steps.version.outputs.version, 'rc') }}
+          draft: false
