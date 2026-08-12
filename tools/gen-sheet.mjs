@@ -166,7 +166,12 @@ p(`<path d="M${M} ${M} H${W - M} V${M + HH - 12} L${W - M - 12} ${M + HH} H${M} 
   `<image xlink:href="assets/portraits/mel-offaleater.png" x="${M + 7}" y="${M + 7}" `
   + `width="74" height="74" preserveAspectRatio="xMidYMin slice" clip-path="url(#pc)"/>`);
 
+// The actor name is the street handle; realName is what the corp database has.
 val(M + 96, M + 38, actor.name, 25, "start", PAPER);
+if (sys.realName) {
+  p(`<text x="${M + 96 + actor.name.length * 15 + 12}" y="${M + 38}" ${F} font-size="9" `
+    + `fill="#9a9aa2">a.k.a. ${esc(sys.realName)}</text>`);
+}
 p(`<text x="${M + 96}" y="${M + 55}" ${F} font-size="8" font-weight="700" letter-spacing="2.4" `
   + `fill="${ACCENT}">TROLL &#183; STREET SAMURAI &#183; MELEE</text>`);
 const tagline = "Lives in a cave. Comes into town when someone needs a door removed.";

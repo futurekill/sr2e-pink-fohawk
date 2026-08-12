@@ -5,7 +5,7 @@ All notable changes to `sr2e-pink-fohawk`.
 ## [Unreleased]
 
 ### Added
-- **Melvin "Mel" Offaleater** — troll melee specialist, uncle to Tina Bonemeal.
+- **Mel** (government name Melvin Offaleater) — troll melee specialist, uncle to Tina Bonemeal.
   Built from real compendium items in `sr2e` and `sr2e-shadowtech`: titanium
   bone lacing, two retractable spurs, Wired Reflexes 2, Muscle Augmentation 4,
   Suprathyroid Gland, Enhanced Articulation, a Reflex Recorder, and Full Heavy
