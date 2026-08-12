@@ -1,0 +1,25 @@
+{
+  "id": "sr2e-pink-fohawk",
+  "title": "Shadowrun 2E: Pink Fohawk",
+  "description": "Player characters and cast for the Pink Fohawk table. Requires the sr2e system, and sr2e-shadowtech for bioware and bone lacing.",
+  "version": "0.1.0",
+  "compatibility": { "minimum": "13", "verified": "13" },
+  "authors": [{ "name": "James Candalino" }],
+  "relationships": {
+    "systems": [{ "id": "sr2e", "type": "system", "compatibility": { "minimum": "0.89.0" } }],
+    "requires": [{ "id": "sr2e-shadowtech", "type": "module" }]
+  },
+  "packs": [
+    {
+      "name": "pf-actors",
+      "label": "Pink Fohawk — Cast",
+      "path": "packs/pf-actors",
+      "type": "Actor",
+      "system": "sr2e",
+      "ownership": { "PLAYER": "OBSERVER", "ASSISTANT": "OWNER" }
+    }
+  ],
+  "packFolders": [],
+  "esmodules": [],
+  "styles": []
+}

@@ -1,0 +1,7 @@
+packs/
+node_modules/
+_work/
+.DS_Store
+.sheet.svg
+dist/*.svg
+dist/*.png

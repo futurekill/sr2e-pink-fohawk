@@ -1,0 +1,1129 @@
+{
+  "_id": "melofflea7e70011",
+  "name": "Melvin \"Mel\" Offaleater",
+  "type": "character",
+  "img": "modules/sr2e-pink-fohawk/assets/portraits/mel-offaleater.webp",
+  "system": {
+    "biography": "<p><strong>Old.</strong> Old enough that most trolls his age are dead or settled, and he is neither. Mel lives alone in a comfortable cave a long way from any sprawl, comes into the city when someone needs a door removed, and goes home again.</p><p>Well over three metres — enormous even by troll standards, and used to not fitting through things. Warm sandstone hide covered in dermal denticles that rasp like a cat's tongue. Knobbly coral-like keratin growths burst through the knees of every pair of trousers he has ever owned, and cap both elbows. One horn snapped off years ago and is capped with a bolted steel plate he had fitted himself.</p><p><strong>He is a sweetheart, and he does not look like one.</strong> The face is broken-nosed, scarred and utterly still, and people cross the street. What they are missing is the battered comic book in his chest pocket, which he cannot read and looks at anyway.</p><p><strong>In a fight he is a different animal entirely.</strong> Reaction 10 on three dice means he acts twice while most of the room acts once, and he closes the distance on the first pass. The fists are the default — 19M Stun puts people down without killing them. The spurs come out when he means it.</p><p><em>Uncle to Tina Bonemeal. He is her most sincere and least useful supporter.</em></p>",
+    "race": "troll",
+    "body": {
+      "base": 6,
+      "mod": 0,
+      "value": 11,
+      "racial": 5
+    },
+    "quickness": {
+      "base": 3,
+      "mod": 0,
+      "value": 2,
+      "racial": -1
+    },
+    "strength": {
+      "base": 6,
+      "mod": 0,
+      "value": 10,
+      "racial": 4
+    },
+    "charisma": {
+      "base": 3,
+      "mod": 0,
+      "value": 1,
+      "racial": -2
+    },
+    "intelligence": {
+      "base": 4,
+      "mod": 0,
+      "value": 2,
+      "racial": -2
+    },
+    "willpower": {
+      "base": 2,
+      "mod": 0,
+      "value": 1,
+      "racial": -1
+    },
+    "essence": {
+      "value": 6,
+      "max": 6
+    },
+    "bodyIndex": {
+      "value": 5.45,
+      "max": 11
+    },
+    "magic": {
+      "value": 0,
+      "max": 0,
+      "tradition": "none",
+      "type": "none",
+      "totem": ""
+    },
+    "karma": {
+      "current": 0,
+      "total": 30,
+      "pool": 4
+    },
+    "nuyen": 12000,
+    "conditionMonitor": {
+      "physical": {
+        "value": 0,
+        "max": 10,
+        "overflow": 0
+      },
+      "stun": {
+        "value": 0,
+        "max": 10,
+        "overflow": 0
+      },
+      "overflow": 0
+    },
+    "armor": {
+      "ballistic": 0,
+      "impact": 0
+    },
+    "dicePools": {
+      "combat": {
+        "value": 0,
+        "max": 0,
+        "bonus": 0
+      },
+      "magic": {
+        "value": 0,
+        "max": 0,
+        "bonus": 0
+      },
+      "control": {
+        "value": 0,
+        "max": 0,
+        "bonus": 0
+      },
+      "hacking": {
+        "value": 0,
+        "max": 0,
+        "bonus": 0
+      },
+      "spellDefense": 0,
+      "shieldingBonus": 0
+    },
+    "chargen": {
+      "inProgress": false,
+      "priorities": {
+        "race": "A",
+        "attributes": "B",
+        "resources": "C",
+        "skills": "D",
+        "magic": "E"
+      }
+    }
+  },
+  "items": [
+    {
+      "_id": "melo00426f6e6520",
+      "name": "Bone Lacing (Titanium)",
+      "type": "cyberware",
+      "img": "modules/sr2e-shadowtech/assets/item_icons/cyberware/bone-lacing-titanium.webp",
+      "system": {
+        "location": "bodyware",
+        "grade": "standard",
+        "essenceCost": 2.25,
+        "rating": 1,
+        "cost": 75000,
+        "availability": "",
+        "streetIndex": "",
+        "legality": "Legal",
+        "installed": true,
+        "isWeapon": false,
+        "weaponType": "melee",
+        "skill": "armed combat",
+        "damageCode": "",
+        "damageType": "physical",
+        "reach": 0,
+        "combatTnMod": 0,
+        "isVcr": false,
+        "noReactionBonus": false,
+        "isTacticalComputer": false,
+        "unarmedPowerBonus": 3,
+        "armorBallistic": 1,
+        "armorImpact": 1,
+        "cranialDeck": false,
+        "deck": {
+          "active": false,
+          "mpcp": 0,
+          "hardening": 0,
+          "activeMemory": 0,
+          "storageMemory": 0,
+          "loadSpeed": 0,
+          "ioSpeed": 0,
+          "response": 0
+        },
+        "ratingStats": [],
+        "attributeMods": {
+          "body": 2,
+          "quickness": 0,
+          "strength": 0,
+          "charisma": 0,
+          "intelligence": 0,
+          "willpower": 0,
+          "reaction": 0,
+          "initiativeDice": 0
+        },
+        "capacity": 0,
+        "modules": [],
+        "notes": "Reinforced bones: +2 Body, +1 Impact and +1 Ballistic armor (cumulative with worn), unarmed blows become (Str+3)M — automated. May instead do Physical at half Power, round up (not automated). +15 kg weight; Barrier Rating 10; shows on metal detectors (Shadowtech p.42)."
+      },
+      "effects": [],
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "sr2e",
+        "systemVersion": "0.89.0",
+        "createdTime": 1785000000000,
+        "modifiedTime": 1785000000000,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "melo015265747261",
+      "name": "Retractable Spur",
+      "type": "cyberware",
+      "img": "systems/sr2e/assets/item_icons/cyberware/retractable-spur.webp",
+      "system": {
+        "location": "bodyware",
+        "grade": "standard",
+        "essenceCost": 0.3,
+        "rating": 0,
+        "cost": 11500,
+        "availability": "5/72hrs",
+        "legality": "Restricted",
+        "installed": true,
+        "attributeMods": {
+          "body": 0,
+          "quickness": 0,
+          "strength": 0,
+          "charisma": 0,
+          "intelligence": 0,
+          "willpower": 0,
+          "reaction": 0,
+          "initiativeDice": 0
+        },
+        "ratingStats": [],
+        "notes": "SR2E p.246 (table p.261). Retractable forearm blade — (Str+2)L damage. Essence .3, 11,500¥.",
+        "isWeapon": true,
+        "weaponType": "melee",
+        "skill": "armed combat",
+        "damageType": "physical",
+        "reach": 0,
+        "damageCode": "(Str+2)L"
+      },
+      "effects": [],
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "sr2e",
+        "systemVersion": "0.89.0",
+        "createdTime": 1785000000000,
+        "modifiedTime": 1785000000000,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "melo025265747261",
+      "name": "Retractable Spur",
+      "type": "cyberware",
+      "img": "systems/sr2e/assets/item_icons/cyberware/retractable-spur.webp",
+      "system": {
+        "location": "bodyware",
+        "grade": "standard",
+        "essenceCost": 0.3,
+        "rating": 0,
+        "cost": 11500,
+        "availability": "5/72hrs",
+        "legality": "Restricted",
+        "installed": true,
+        "attributeMods": {
+          "body": 0,
+          "quickness": 0,
+          "strength": 0,
+          "charisma": 0,
+          "intelligence": 0,
+          "willpower": 0,
+          "reaction": 0,
+          "initiativeDice": 0
+        },
+        "ratingStats": [],
+        "notes": "SR2E p.246 (table p.261). Retractable forearm blade — (Str+2)L damage. Essence .3, 11,500¥.",
+        "isWeapon": true,
+        "weaponType": "melee",
+        "skill": "armed combat",
+        "damageType": "physical",
+        "reach": 0,
+        "damageCode": "(Str+2)L"
+      },
+      "effects": [],
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "sr2e",
+        "systemVersion": "0.89.0",
+        "createdTime": 1785000000000,
+        "modifiedTime": 1785000000000,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "melo035769726564",
+      "name": "Wired Reflexes (Level 2)",
+      "type": "cyberware",
+      "img": "systems/sr2e/assets/item_icons/cyberware/wired-reflexes-level-2.webp",
+      "system": {
+        "location": "bodyware",
+        "grade": "standard",
+        "essenceCost": 3,
+        "rating": 2,
+        "cost": 165000,
+        "availability": "4/8 days",
+        "legality": "Restricted",
+        "installed": true,
+        "attributeMods": {
+          "body": 0,
+          "quickness": 0,
+          "strength": 0,
+          "charisma": 0,
+          "intelligence": 0,
+          "willpower": 0,
+          "reaction": 4,
+          "initiativeDice": 2
+        },
+        "ratingStats": [],
+        "notes": "SR2E p.247 (table p.261). Implanted neural boosters and adrenaline stimulators: each level adds +2 Reaction and +1D6 Initiative. Level 2: +4 Reaction, +2D6; Essence 3, 165,000¥."
+      },
+      "effects": [],
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "sr2e",
+        "systemVersion": "0.89.0",
+        "createdTime": 1785000000000,
+        "modifiedTime": 1785000000000,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "melo044d7573636c",
+      "name": "Muscle Augmentation (Level 4)",
+      "type": "bioware",
+      "img": "modules/sr2e-shadowtech/assets/item_icons/bioware/muscle-augmentation.webp",
+      "system": {
+        "bodySystem": "structural",
+        "grade": "standard",
+        "bodyCost": 3.2,
+        "rating": 4,
+        "cost": 180000,
+        "availability": "6/6 days",
+        "streetIndex": ".9",
+        "legality": "4P-BC/D",
+        "installed": true,
+        "triggered": false,
+        "active": false,
+        "ratingStats": [
+          {
+            "rating": 1,
+            "bodyCost": 0.8,
+            "cost": 45000,
+            "availability": "6/6 days",
+            "streetIndex": ".9",
+            "armorBallistic": 0,
+            "armorImpact": 0
+          },
+          {
+            "rating": 2,
+            "bodyCost": 1.6,
+            "cost": 90000,
+            "availability": "6/6 days",
+            "streetIndex": ".9",
+            "armorBallistic": 0,
+            "armorImpact": 0
+          },
+          {
+            "rating": 3,
+            "bodyCost": 2.4,
+            "cost": 135000,
+            "availability": "6/6 days",
+            "streetIndex": ".9",
+            "armorBallistic": 0,
+            "armorImpact": 0
+          },
+          {
+            "rating": 4,
+            "bodyCost": 3.2,
+            "cost": 180000,
+            "availability": "6/6 days",
+            "streetIndex": ".9",
+            "armorBallistic": 0,
+            "armorImpact": 0
+          }
+        ],
+        "armorBallistic": 0,
+        "armorImpact": 0,
+        "attributeMods": {
+          "body": 0,
+          "quickness": 1,
+          "strength": 1,
+          "charisma": 0,
+          "intelligence": 0,
+          "willpower": 0,
+          "reaction": 0,
+          "initiativeDice": 0
+        },
+        "noReactionBonus": false,
+        "activeSkillDice": 0,
+        "damageCompensator": false,
+        "ignoresStunPenalty": false,
+        "notes": "Gortex-braided muscle: +1 Quickness and +1 Strength per Level (max Level 4; the Quickness DOES feed Reaction). Bonuses don't help rigging or decking except for lifting/carrying (Shadowtech p.35)."
+      },
+      "effects": [],
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "sr2e",
+        "systemVersion": "0.89.0",
+        "createdTime": 1785000000000,
+        "modifiedTime": 1785000000000,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "melo055375707261",
+      "name": "Suprathyroid Gland",
+      "type": "bioware",
+      "img": "modules/sr2e-shadowtech/assets/item_icons/bioware/suprathyroid-gland.webp",
+      "system": {
+        "bodySystem": "endocrine",
+        "grade": "standard",
+        "bodyCost": 1.4,
+        "rating": 1,
+        "cost": 50000,
+        "availability": "8/12 days",
+        "streetIndex": "2.5",
+        "legality": "6P-BB",
+        "installed": true,
+        "triggered": false,
+        "active": false,
+        "ratingStats": [],
+        "armorBallistic": 0,
+        "armorImpact": 0,
+        "attributeMods": {
+          "body": 1,
+          "quickness": 1,
+          "strength": 1,
+          "charisma": 0,
+          "intelligence": 0,
+          "willpower": 0,
+          "reaction": 1,
+          "initiativeDice": 0
+        },
+        "noReactionBonus": false,
+        "activeSkillDice": 0,
+        "damageCompensator": false,
+        "ignoresStunPenalty": false,
+        "notes": "Supercharged metabolism: +1 Body, +1 Quickness, +1 Strength, +1 Reaction (the Quickness also feeds Reaction). Requires double food/drink; radiates heat (−1 TN for thermographic observers to notice). The Reaction bonus doesn't help rigging or decking (Shadowtech p.20)."
+      },
+      "effects": [],
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "sr2e",
+        "systemVersion": "0.89.0",
+        "createdTime": 1785000000000,
+        "modifiedTime": 1785000000000,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "melo06456e68616e",
+      "name": "Enhanced Articulation",
+      "type": "bioware",
+      "img": "modules/sr2e-shadowtech/assets/item_icons/bioware/enhanced-articulation.webp",
+      "system": {
+        "bodySystem": "structural",
+        "grade": "standard",
+        "bodyCost": 0.6,
+        "rating": 1,
+        "cost": 40000,
+        "availability": "5/6 days",
+        "streetIndex": "1.5",
+        "legality": "Legal",
+        "installed": true,
+        "triggered": false,
+        "active": false,
+        "ratingStats": [],
+        "armorBallistic": 0,
+        "armorImpact": 0,
+        "attributeMods": {
+          "body": 0,
+          "quickness": 0,
+          "strength": 0,
+          "charisma": 0,
+          "intelligence": 0,
+          "willpower": 0,
+          "reaction": 1,
+          "initiativeDice": 0
+        },
+        "noReactionBonus": false,
+        "activeSkillDice": 1,
+        "damageCompensator": false,
+        "ignoresStunPenalty": false,
+        "notes": "Fluid joints and tendons: +1 die to any Active Skill Success Test (automated — applies to skill rolls AND weapon attacks; RAW that includes Sorcery/Conjuring and the social skills, since SR2 counts them as Active Skills), and +1 Reaction (automatically excluded from rigging and pure cyber-decking) (Shadowtech p.34)."
+      },
+      "effects": [],
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "sr2e",
+        "systemVersion": "0.89.0",
+        "createdTime": 1785000000000,
+        "modifiedTime": 1785000000000,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "melo075265666c65",
+      "name": "Reflex Recorder (General)",
+      "type": "bioware",
+      "img": "modules/sr2e-shadowtech/assets/item_icons/bioware/reflex-recorder-general.webp",
+      "system": {
+        "bodySystem": "neural",
+        "grade": "standard",
+        "bodyCost": 0.25,
+        "rating": 1,
+        "cost": 25000,
+        "availability": "8/6 days",
+        "streetIndex": "1.5",
+        "legality": "Legal",
+        "installed": true,
+        "triggered": false,
+        "active": false,
+        "ratingStats": [],
+        "armorBallistic": 0,
+        "armorImpact": 0,
+        "attributeMods": {
+          "body": 0,
+          "quickness": 0,
+          "strength": 0,
+          "charisma": 0,
+          "intelligence": 0,
+          "willpower": 0,
+          "reaction": 0,
+          "initiativeDice": 0
+        },
+        "noReactionBonus": false,
+        "activeSkillDice": 0,
+        "damageCompensator": false,
+        "ignoresStunPenalty": false,
+        "notes": "Permanently adds +1 die to one chosen Active or Vehicle Skill (not B&R). General model = a whole skill. Concentration model: Body Cost 0.1, 10,000¥, Avail 5/6 days — one Concentration only. Not cumulative and incompatible with skillwires (Shadowtech p.27). Neural bioware — inherently cultured; the listed Body Cost already includes the 25% reduction (Shadowtech p.7), so it is recorded at standard grade."
+      },
+      "effects": [],
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "sr2e",
+        "systemVersion": "0.89.0",
+        "createdTime": 1785000000000,
+        "modifiedTime": 1785000000000,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "melo0846756c6c20",
+      "name": "Full Heavy Armor",
+      "type": "armor",
+      "img": "systems/sr2e/assets/item_icons/armor/full-heavy-armor.webp",
+      "system": {
+        "ballistic": 8,
+        "impact": 6,
+        "concealability": 0,
+        "weight": 0,
+        "cost": 20000,
+        "availability": "16/14 days",
+        "legality": "Forbidden",
+        "equipped": true,
+        "isLayered": false,
+        "notes": "Full heavy suit — Body+15 to encumbrance; military-grade. SR2E p.257. Heavy armor: reduces the Combat Pool by 1 die per point of Ballistic over the wearer's Quickness (SR2E p.84).",
+        "heavyArmor": true,
+        "streetIndex": 3
+      },
+      "effects": [],
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "sr2e",
+        "systemVersion": "0.89.0",
+        "createdTime": 1785000000000,
+        "modifiedTime": 1785000000000,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "melo09736b696c6c",
+      "name": "Armed Combat",
+      "type": "skill",
+      "img": "icons/svg/book.svg",
+      "system": {
+        "category": "active",
+        "linkedAttribute": "strength",
+        "rating": 7,
+        "concentration": {
+          "name": "",
+          "rating": 0
+        },
+        "specialization": {
+          "name": "",
+          "rating": 0
+        },
+        "isMagical": false,
+        "notes": "6 at creation, raised to 7 with Karma (7 × 2 = 14)."
+      },
+      "effects": [],
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "sr2e",
+        "systemVersion": "0.89.0",
+        "createdTime": 1785000000000,
+        "modifiedTime": 1785000000000,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "melo0a736b696c6c",
+      "name": "Unarmed Combat",
+      "type": "skill",
+      "img": "icons/svg/book.svg",
+      "system": {
+        "category": "active",
+        "linkedAttribute": "strength",
+        "rating": 6,
+        "concentration": {
+          "name": "",
+          "rating": 0
+        },
+        "specialization": {
+          "name": "",
+          "rating": 0
+        },
+        "isMagical": false,
+        "notes": "5 at creation, raised to 6 with Karma (6 × 2 = 12)."
+      },
+      "effects": [],
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "sr2e",
+        "systemVersion": "0.89.0",
+        "createdTime": 1785000000000,
+        "modifiedTime": 1785000000000,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "melo0b736b696c6c",
+      "name": "Athletics",
+      "type": "skill",
+      "img": "icons/svg/book.svg",
+      "system": {
+        "category": "active",
+        "linkedAttribute": "body",
+        "rating": 3,
+        "concentration": {
+          "name": "",
+          "rating": 0
+        },
+        "specialization": {
+          "name": "",
+          "rating": 0
+        },
+        "isMagical": false,
+        "notes": ""
+      },
+      "effects": [],
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "sr2e",
+        "systemVersion": "0.89.0",
+        "createdTime": 1785000000000,
+        "modifiedTime": 1785000000000,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "melo0c736b696c6c",
+      "name": "Intimidation",
+      "type": "skill",
+      "img": "icons/svg/book.svg",
+      "system": {
+        "category": "active",
+        "linkedAttribute": "charisma",
+        "rating": 3,
+        "concentration": {
+          "name": "",
+          "rating": 0
+        },
+        "specialization": {
+          "name": "",
+          "rating": 0
+        },
+        "isMagical": false,
+        "notes": ""
+      },
+      "effects": [],
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "sr2e",
+        "systemVersion": "0.89.0",
+        "createdTime": 1785000000000,
+        "modifiedTime": 1785000000000,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "melo0d736b696c6c",
+      "name": "Etiquette",
+      "type": "skill",
+      "img": "icons/svg/book.svg",
+      "system": {
+        "category": "active",
+        "linkedAttribute": "charisma",
+        "rating": 2,
+        "concentration": {
+          "name": "Street",
+          "rating": 2
+        },
+        "specialization": {
+          "name": "",
+          "rating": 0
+        },
+        "isMagical": false,
+        "notes": ""
+      },
+      "effects": [],
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "sr2e",
+        "systemVersion": "0.89.0",
+        "createdTime": 1785000000000,
+        "modifiedTime": 1785000000000,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "melo0e736b696c6c",
+      "name": "Firearms",
+      "type": "skill",
+      "img": "icons/svg/book.svg",
+      "system": {
+        "category": "active",
+        "linkedAttribute": "quickness",
+        "rating": 2,
+        "concentration": {
+          "name": "",
+          "rating": 0
+        },
+        "specialization": {
+          "name": "",
+          "rating": 0
+        },
+        "isMagical": false,
+        "notes": "1 at creation, raised to 2 with Karma (2 × 2 = 4). He can shoot. He would rather not."
+      },
+      "effects": [],
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "sr2e",
+        "systemVersion": "0.89.0",
+        "createdTime": 1785000000000,
+        "modifiedTime": 1785000000000,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "melo0f736b696c6c",
+      "name": "Comic Book Trivia",
+      "type": "skill",
+      "img": "icons/svg/book.svg",
+      "system": {
+        "category": "knowledge",
+        "linkedAttribute": "intelligence",
+        "rating": 4,
+        "concentration": {
+          "name": "",
+          "rating": 0
+        },
+        "specialization": {
+          "name": "",
+          "rating": 0
+        },
+        "isMagical": false,
+        "notes": "Entirely visual. He cannot read a word of any of them."
+      },
+      "effects": [],
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "sr2e",
+        "systemVersion": "0.89.0",
+        "createdTime": 1785000000000,
+        "modifiedTime": 1785000000000,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "melo10713a496c6c",
+      "name": "Illiterate",
+      "type": "quality",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "kind": "flaw",
+        "category": "mental",
+        "pointValue": -1,
+        "attribute": "",
+        "attributeBonus": 0,
+        "maximumBonus": 0,
+        "source": "Shadowrun Companion",
+        "notes": "Cannot read. Cannot take most Technical or Knowledge skills, and relies on others to translate."
+      },
+      "effects": [],
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "sr2e",
+        "systemVersion": "0.89.0",
+        "createdTime": 1785000000000,
+        "modifiedTime": 1785000000000,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "melo11713a4f626c",
+      "name": "Oblivious",
+      "type": "quality",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "kind": "flaw",
+        "category": "mental",
+        "pointValue": -2,
+        "attribute": "",
+        "attributeBonus": 0,
+        "maximumBonus": 0,
+        "source": "Shadowrun Companion",
+        "notes": "Takes things at face value. Believes the X-Men films were documentaries, and will argue the point."
+      },
+      "effects": [],
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "sr2e",
+        "systemVersion": "0.89.0",
+        "createdTime": 1785000000000,
+        "modifiedTime": 1785000000000,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "melo12713a457863",
+      "name": "Exceptional Attribute (Strength)",
+      "type": "quality",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "kind": "edge",
+        "category": "attribute",
+        "pointValue": 2,
+        "attribute": "strength",
+        "attributeBonus": 0,
+        "maximumBonus": 1,
+        "source": "Shadowrun Companion",
+        "notes": "Raises the troll Strength maximum from 10 to 11. Raises the ceiling only — the point itself is bought below."
+      },
+      "effects": [],
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "sr2e",
+        "systemVersion": "0.89.0",
+        "createdTime": 1785000000000,
+        "modifiedTime": 1785000000000,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "melo13713a426f6e",
+      "name": "Bonus Attribute Point (Strength)",
+      "type": "quality",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "kind": "edge",
+        "category": "attribute",
+        "pointValue": 1,
+        "attribute": "strength",
+        "attributeBonus": 1,
+        "maximumBonus": 0,
+        "source": "Shadowrun Companion",
+        "notes": "Actually reaches the raised maximum. Counts as natural Strength."
+      },
+      "effects": [],
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "sr2e",
+        "systemVersion": "0.89.0",
+        "createdTime": 1785000000000,
+        "modifiedTime": 1785000000000,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "melo14633a54696e",
+      "name": "Tina Bonemeal",
+      "type": "contact",
+      "img": "icons/svg/village.svg",
+      "system": {
+        "contactType": "contact",
+        "archetype": "Surveillance Specialist",
+        "loyalty": 6,
+        "influence": 3,
+        "description": "<p><strong>His niece.</strong> Nine and a half feet of troll muscle — which is to say a perfectly ordinary size for a troll, and a head shorter than her uncle. Expert in surveillance: she will sit on a building for eleven hours and tell you precisely who came and went.</p><p>Completely socially inept, and desperate to be an actress. She can tell you everything about a person except how to talk to one.</p><p><strong>Mel believes she has already made it.</strong> He cannot read a script, a review or a casting call, so he simply takes her word and repeats it to strangers at length. If she ever books a role he will look at the poster for hours, because looking at pictures is the part he can do.</p><p><em>Loyalty 6 — family. She does not charge him.</em></p>",
+        "notes": ""
+      },
+      "effects": [],
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "sr2e",
+        "systemVersion": "0.89.0",
+        "createdTime": 1785000000000,
+        "modifiedTime": 1785000000000,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    }
+  ],
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "sr2e",
+    "systemVersion": "0.89.0",
+    "createdTime": 1785000000000,
+    "modifiedTime": 1785000000000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "prototypeToken": {
+    "name": "Mel",
+    "displayName": 20,
+    "actorLink": true,
+    "width": 2,
+    "height": 2,
+    "texture": {
+      "src": "modules/sr2e-pink-fohawk/assets/portraits/mel-offaleater.webp",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "offsetX": 0,
+      "offsetY": 0,
+      "fit": "cover",
+      "scaleX": 1,
+      "scaleY": 1,
+      "rotation": 0,
+      "tint": "#ffffff",
+      "alphaThreshold": 0.75
+    },
+    "lockRotation": true,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": 1,
+    "displayBars": 20,
+    "bar1": {
+      "attribute": "conditionMonitor.physical"
+    },
+    "bar2": {
+      "attribute": "conditionMonitor.stun"
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!actors!melofflea7e70011"
+}
