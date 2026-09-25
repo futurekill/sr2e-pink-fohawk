@@ -1,4 +1,4 @@
-name: Lint
+name: Lint & validate
 
 on:
   push:
@@ -7,10 +7,20 @@ on:
     branches: [main]
 
 jobs:
-  lint:
+  check:
     runs-on: ubuntu-latest
     steps:
+      # tools/validate-packs.mjs imports the system's config (chargen priority
+      # tables) from a sibling checkout, ../../sr2e-foundryvtt — reproduce that
+      # layout: this repo and the system side by side in the workspace.
       - uses: actions/checkout@v5
+        with:
+          path: sr2e-pink-fohawk
+
+      - uses: actions/checkout@v5
+        with:
+          repository: futurekill/sr2e-foundryvtt
+          path: sr2e-foundryvtt
 
       - uses: actions/setup-node@v5
         with:
@@ -18,9 +28,16 @@ jobs:
 
       # package-lock.json is git-ignored in these repos, so install (not ci).
       - name: Install dependencies
+        working-directory: sr2e-pink-fohawk
         run: npm install --no-audit --no-fund
 
       # Undefined names (no-undef) and other correctness rules fail the build;
       # unused names are warnings only.
       - name: Lint
+        working-directory: sr2e-pink-fohawk
         run: npm run lint
+
+      # Chargen arithmetic, Essence/Body Index ceilings, and art on disk.
+      - name: Validate packs
+        working-directory: sr2e-pink-fohawk
+        run: npm run validate
