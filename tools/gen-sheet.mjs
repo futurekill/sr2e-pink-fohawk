@@ -277,7 +277,7 @@ for (const t of tactics) {
 // right column — the parts you actually reach for mid-fight
 ry = band(RX, ry, COLW, "condition monitor");
 ry += 10;
-for (const [name, track] of [["physical", sys.conditionMonitor.physical],
+for (const [name] of [["physical", sys.conditionMonitor.physical],
                             ["stun", sys.conditionMonitor.stun]]) {
   label(RX, ry + 6, name);
   const bw = 12, gap = 2.6, x0 = RX + 54;
@@ -344,8 +344,8 @@ augs.forEach((a, n) => {
   const col = n < half ? 0 : 1;
   const x = M + col * (COLW + 14), ay = y + (n % half) * 13;
   const cost = a.type === "cyberware"
-    ? `${(a.system.essenceCost ?? 0).toFixed(2)} E`
-    : `${(a.system.bodyCost ?? a.system.actualBodyCost ?? 0).toFixed(2)} BI`;
+    ? `${(a.system.essenceCost ?? 0).toFixed(2)}\u2009E`
+    : `${(a.system.bodyCost ?? a.system.actualBodyCost ?? 0).toFixed(2)}\u2009BI`;
   val(x + 2, ay, a.name, 8, "start", INK, 600);
   val(x + COLW - 2, ay, cost, 7.4, "end", MUTED, 600);
   rule(x, ay + 4, COLW, "#e6e6ea");

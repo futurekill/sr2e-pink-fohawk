@@ -1,0 +1,26 @@
+name: Lint
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: "22"
+
+      # package-lock.json is git-ignored in these repos, so install (not ci).
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+
+      # Undefined names (no-undef) and other correctness rules fail the build;
+      # unused names are warnings only.
+      - name: Lint
+        run: npm run lint
