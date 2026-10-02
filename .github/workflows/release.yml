@@ -107,12 +107,22 @@ jobs:
           cd staging && zip -r ../${{ env.MODULE_ID }}.zip ${{ env.MODULE_ID }}/ && cd ..
           unzip -l ${{ env.MODULE_ID }}.zip
 
-      - name: Extract release notes from commit message
+      # Release notes come from this version's CHANGELOG section ("## X.Y.Z …"),
+      # not the tag commit's message — a release commit has no body, which is how
+      # releases went out with empty notes. A missing or empty section FAILS the
+      # release: every release has notes.
+      - name: Extract release notes from CHANGELOG.md
         id: notes
         run: |
-          TAG="${{ steps.version.outputs.tag }}"
-          echo "subject=$(git log -1 --format='%s' "${TAG}")" >> "$GITHUB_OUTPUT"
-          git log -1 --format='%b' "${TAG}" > /tmp/release_notes.txt
+          VER="${{ steps.version.outputs.version }}"
+          HEAD=$(grep -m1 -E "^## v?${VER//./\\.}([^0-9.]|$)" CHANGELOG.md || true)
+          if [ -z "$HEAD" ]; then echo "::error::CHANGELOG.md has no '## ${VER}' section"; exit 1; fi
+          awk -v h="$HEAD" '$0==h {on=1; next} on && /^## / {exit} on {print}' CHANGELOG.md \
+            | sed -e '/./,$!d' > /tmp/release_notes.txt
+          if ! grep -q '[^[:space:]]' /tmp/release_notes.txt; then echo "::error::the ${VER} section of CHANGELOG.md is empty"; exit 1; fi
+          TITLE=$(printf '%s' "$HEAD" | sed -E 's/^## v?[0-9.]+ *(—|-)? *//')
+          echo "subject=v${VER}${TITLE:+ — ${TITLE}}" >> "$GITHUB_OUTPUT"
+          cat /tmp/release_notes.txt
 
       - name: Create GitHub Release
         uses: ncipollo/release-action@v1
