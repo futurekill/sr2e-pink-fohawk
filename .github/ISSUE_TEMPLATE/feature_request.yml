@@ -1,0 +1,38 @@
+name: "💡 Feature request"
+description: Suggest an addition or improvement for the Pink Fohawk module.
+title: "[Feature] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the idea! If it's a **rule** from the book, a page citation lets it be implemented accurately.
+        One request per issue keeps discussion focused.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What are you trying to do?
+      description: The problem or gap, not the solution — "I want to X, but currently I have to Y."
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What would you like to happen?
+      description: Your suggested behaviour. Rough is fine.
+    validations:
+      required: true
+
+  - type: textarea
+    id: rule
+    attributes:
+      label: Rule reference (if this is a game rule)
+      description: Book + page. Leave blank for pure UI/QoL ideas.
+      placeholder: "Pink Fohawk p.42"
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Alternatives / mockups / extra notes

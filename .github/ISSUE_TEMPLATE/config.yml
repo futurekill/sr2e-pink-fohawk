@@ -1,0 +1,11 @@
+blank_issues_enabled: true
+contact_links:
+  - name: ⚙️ Bug in the SR2E system itself (dice, sheets, combat rules…)
+    url: https://github.com/futurekill/sr2e-foundryvtt/issues/new/choose
+    about: Problems that happen without this module too belong in the system's tracker.
+  - name: 📚 SR2E wiki
+    url: https://github.com/futurekill/sr2e-foundryvtt/wiki
+    about: How-to guides for the system and its modules.
+  - name: 📋 QA Test Plan
+    url: https://github.com/futurekill/sr2e-pink-fohawk/blob/main/docs/QA-PLAN.md
+    about: The checklist to test this module against before filing a bug.

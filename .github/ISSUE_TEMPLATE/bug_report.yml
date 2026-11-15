@@ -1,0 +1,59 @@
+name: "🐞 Bug report"
+description: Something in the Pink Fohawk module is broken or throws an error.
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for testing! Two quick checks first:
+        - Does it still happen with **only** the SR2E system and this module enabled? If it happens without this module, please file it on the [system tracker](https://github.com/futurekill/sr2e-foundryvtt/issues/new/choose) instead.
+        - Wrong stats, prices or page numbers? Use **Wrong or missing book content** instead.
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: What did you do, step by step?
+      placeholder: |
+        1. Opened the compendium
+        2. Dragged the item onto a character
+        3. ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: What actually happened
+    validations:
+      required: true
+
+  - type: textarea
+    id: console
+    attributes:
+      label: Console errors (F12 → Console)
+      description: Paste any red errors. Leave blank if none.
+      render: shell
+
+  - type: input
+    id: versions
+    attributes:
+      label: Versions
+      description: Foundry · SR2E system · this module (Manage Modules shows the module version)
+      placeholder: "Foundry 13.x · SR2E 0.156.0 · Pink Fohawk 1.0.0"
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Screenshots / extra notes
+      description: Drag images straight into this box.
